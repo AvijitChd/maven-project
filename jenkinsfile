@@ -13,7 +13,7 @@ stage ('compile my project')
 steps{
 withMaven(jdk: 'LcalJdk', maven: 'LocalMaven') 
 { 
-sh 'mvn compile'
+sh 'mvn test'
 }
 }
 }

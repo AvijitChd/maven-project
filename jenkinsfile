@@ -8,7 +8,7 @@ stage ('git clone')
 steps 
 { git 'https://github.com/AvijitChd/maven-project.git'}
 }
-stage ('Test my project')
+stage ('Build my project')
 {
 steps{
 withMaven(jdk: 'LcalJdk', maven: 'LocalMaven') 

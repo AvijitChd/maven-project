@@ -3,6 +3,11 @@ pipeline
 agent any
 stages
 {
+stage ('git clone')
+{
+steps 
+{ git 'https://github.com/AvijitChd/maven-project.git'}
+}
 stage ('Test my project')
 {
 steps{
@@ -14,4 +19,3 @@ sh 'mvn test'
 }
 }
 }
-

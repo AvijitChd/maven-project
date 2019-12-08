@@ -8,13 +8,14 @@ stage ('git clone')
 steps 
 { git 'https://github.com/AvijitChd/maven-project.git'}
 }
-}
 stage ('compile my project')
 {
 steps{
 withMaven(jdk: 'LcalJdk', maven: 'LocalMaven') 
 { 
 sh 'mvn compile'
+}
+}
 }
 }
 }
